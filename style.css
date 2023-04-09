@@ -1,0 +1,105 @@
+nav {
+    display: none;
+}
+h1 {
+    font-size: 4rem;
+}
+.menu-icon:hover {
+    cursor: pointer;
+}
+.menu-icon {
+    animation: slideIn 1s linear;
+}
+span {
+    content: "";
+    height: 5px;
+    width: 50px;
+    display: inline-block;
+    background-color: gray;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+span::before{
+    content: "";
+    height: 5px;
+    width: 50px;
+    display: inline-block;
+    background-color: gray;
+    border-radius: 5px;
+    margin: 18px 0 0 0;
+    
+}
+span::after{
+    content: "";
+    height: 5px;
+    width: 50px;
+    display: inline-block;
+    background-color: gray;
+    border-radius: 5px;
+   
+}
+
+.open span {
+background-color: black;
+
+}
+
+.open span::before {
+    transform-origin: 75%;
+    transform: rotate(45deg);
+    position: absolute;
+
+}
+
+.open span::after {
+    transform-origin: 75%;
+    transform: rotate(-45deg);
+    position: absolute;
+}
+.open ~ h1 {
+    margin-top: 110px;
+}
+.open.menu-icon {
+    background-color: black;
+    /* color: white; */
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slideOut 1s linear;
+}
+
+.open nav {
+    display: block;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+li {
+list-style: none;
+}
+
+@keyframes slideOut {
+    0% {
+width: 0%;
+    }
+    100% {
+width: 50%;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+width: 100%;
+    }
+    100% {
+width: 0%;
+    }
+}
+
+@keyframe to make a cartwheel animation
+move X to the right of the blackmenu 
+style nav links to match
